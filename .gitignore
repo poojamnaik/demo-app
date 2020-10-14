@@ -1,0 +1,103 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+#list-app
+
+# compiled output
+/list-app/dist
+/list-app/tmp
+/list-app/out-tsc
+# Only exists if Bazel was run
+/list-app/bazel-out
+
+# dependencies
+/list-app/node_modules
+/list-appdist
+# profiling files
+/list-app/chrome-profiler-events*.json
+/list-app/speed-measure-plugin*.json
+
+# IDEs and editors
+/list-app/.idea
+/list-app/.project
+/list-app/.classpath
+/list-app/.c9/
+/list-app/*.launch
+/list-app/.settings/
+/list-app/*.sublime-workspace
+
+# IDE - VSCode
+/list-app/.vscode/*
+/list-app/!.vscode/settings.json
+/list-app/!.vscode/tasks.json
+/list-app/!.vscode/launch.json
+/list-app/!.vscode/extensions.json
+/list-app/.history/*
+
+# misc
+/list-app/.sass-cache
+/list-app/connect.lock
+/list-app/coverage
+/list-app/libpeerconnection.log
+/list-app/npm-debug.log
+/list-app/yarn-error.log
+/list-app/testem.log
+/list-app/typings
+
+# System Files
+/list-app/.DS_Store
+/list-app/Thumbs.db
+
+# Environment
+/list-app/.env
+
+#details-app
+
+# compiled output
+/details-app/dist
+/details-app/tmp
+/details-app/out-tsc
+# Only exists if Bazel was run
+/details-app/bazel-out
+
+# dependencies
+/details-app/node_modules
+/details-appdist
+# profiling files
+/details-app/chrome-profiler-events*.json
+/details-app/speed-measure-plugin*.json
+
+# IDEs and editors
+/details-app/.idea
+/details-app/.project
+/details-app/.classpath
+/details-app/.c9/
+/details-app/*.launch
+/details-app/.settings/
+/details-app/*.sublime-workspace
+
+# IDE - VSCode
+/details-app/.vscode/*
+/details-app/!.vscode/settings.json
+/details-app/!.vscode/tasks.json
+/details-app/!.vscode/launch.json
+/details-app/!.vscode/extensions.json
+/details-app/.history/*
+
+# misc
+/details-app/.sass-cache
+/details-app/connect.lock
+/details-app/coverage
+/details-app/libpeerconnection.log
+/details-app/npm-debug.log
+/details-app/yarn-error.log
+/details-app/testem.log
+/details-app/typings
+
+# System Files
+/details-app/.DS_Store
+/details-app/Thumbs.db
+.DS_Store
+Thumbs.db
+
+# Environment
+/details-app/.env

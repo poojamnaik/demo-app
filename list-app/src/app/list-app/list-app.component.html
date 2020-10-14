@@ -1,0 +1,9 @@
+<div class="list-container">
+    <button (click) = "showFlash()"> showFlash</button>
+    <div class="list-item" *ngFor="let month of months; let i = index;" (click)="selectMonth(month);">
+        <span [ngClass]="{'selected-item': month === selectedMonth}">{{month}}</span>
+    </div>
+    <div class="footer">
+        <button (click)="clearSelection();">Reset Month Selection</button>
+    </div>
+</div>

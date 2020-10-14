@@ -1,0 +1,25 @@
+<div class="footer">
+    <button (click)="switchOfTrigger();">Unsubscribe From Causeway Star Selection Trigger</button>
+    <button (click)="removeThor();">Remove Thor</button>
+    <button (click)="clearAllMenu();">clear Custom Menu</button>
+</div>
+<div *ngIf="selectedStar" class="list-container">
+    <div class="list-item">
+        Current Star Value: {{selectedStar}}
+    </div>
+    <div *ngIf="causewayStarList[selectedStar]" class="list-item">
+        <p>{{causewayStarList[selectedStar]}}</p>
+    </div>
+    <div *ngIf="!causewayStarList[selectedStar]" class="list-item">
+        No description for the selected Causeway Star value.
+    </div>
+    <div class="list-item">
+        Other Star Values(On Trigger):
+    </div>
+    <div *ngIf="showOtherValues" class="list-item">
+        {{otherCausewayStarValues}}
+    </div>
+</div>
+<div class="list-container" *ngIf="!selectedStar">
+    Select a Causeway Star value to see what it means.
+</div>

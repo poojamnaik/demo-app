@@ -1,0 +1,16 @@
+<div class="footer">
+    <button (click)="switchOfTrigger();">Unsubscribe Trigger</button>
+</div>
+<div *ngIf="selectedMonth" class="list-container">
+    <div *ngIf="holidaysList[selectedMonth]?.length>0">
+        <div class="list-item" *ngFor="let holidays of holidaysList[selectedMonth]; let i = index;">
+            <span>{{holidays.date}}: {{holidays.details}}</span>
+        </div>
+    </div>
+    <div *ngIf="holidaysList[selectedMonth] && holidaysList[selectedMonth].length===0">
+        No Holidays for the selected Month
+    </div>
+</div>
+<div class="list-container" *ngIf="!selectedMonth">
+    Select a month to see the holidays
+</div>

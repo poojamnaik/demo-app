@@ -1,0 +1,13 @@
+<div *ngIf="currentMonth" class="list-container">
+    <div *ngIf="monthDetailsList[currentMonth]?.length>0">
+        <div class="list-item" *ngFor="let details of monthDetailsList[currentMonth]; let i = index;">
+            <span>{{details}}</span>
+        </div>
+    </div>
+    <div *ngIf="monthDetailsList[currentMonth] && monthDetailsList[currentMonth].length===0">
+        No details for the selected Month
+    </div>
+</div>
+<div class="list-container" *ngIf="!currentMonth">
+    Select a month to see the details
+</div>

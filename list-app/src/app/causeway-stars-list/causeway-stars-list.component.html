@@ -1,0 +1,8 @@
+<div class="list-container">
+    <div class="list-item" *ngFor="let star of causewayStars; let i = index;" (click)="selectStar(star);">
+        <span [ngClass]="{'selected-item': star === selectedStar}">{{star}}</span>
+    </div>
+    <div class="footer">
+        <button (click)="clearSelection();">Reset Causeway Star Selection</button>
+    </div>
+</div>

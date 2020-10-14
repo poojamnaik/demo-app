@@ -1,0 +1,17 @@
+.list-container{
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.list-item{
+    padding: 10px 0;
+    cursor: pointer;
+}
+
+.selected-item{
+    color: #1959c2;
+}
+
+.footer{
+    text-align: right;
+}
