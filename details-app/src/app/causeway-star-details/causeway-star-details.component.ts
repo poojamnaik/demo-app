@@ -44,7 +44,7 @@ export class CausewayStarDetailsComponent implements OnInit {
           ignore: function() {
             console.log("flash ignored in work together");
           },
-          dismissAfter: 7000
+          dismissAfter: 5000
         })
       }else if(this.selectedStar === 'Be Proud'){
         Portal.flash.info({
@@ -89,6 +89,7 @@ export class CausewayStarDetailsComponent implements OnInit {
         message: 'I am Captain America, leader of the Avengers'
       })
     });
+
   }
 
   switchOfTrigger(){
