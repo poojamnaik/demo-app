@@ -7,15 +7,20 @@ import { ListAppComponent } from './list-app/list-app.component';
 import { PostAppComponent } from './post-app/post-app.component';
 import { CausewayStarsListComponent } from './causeway-stars-list/causeway-stars-list.component';
 
+import { FormsModule } from '@angular/forms';
+import { DeepLinkComponent } from './deep-link/deep-link.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     ListAppComponent,
     PostAppComponent,
-    CausewayStarsListComponent
+    CausewayStarsListComponent,
+    DeepLinkComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule
   ],
   providers: [],

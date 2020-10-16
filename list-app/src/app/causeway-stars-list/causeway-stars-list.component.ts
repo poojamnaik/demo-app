@@ -15,6 +15,7 @@ export class CausewayStarsListComponent implements OnInit {
   constructor(private ngZone: NgZone) { }
 
   ngOnInit(): void {
+    Portal.title("Causeway Star List Subtitle");
     Portal.store.get('causeway-stars.selectedStar',(data:any) => this.ngZone.run(() =>{
       this.selectedStar = data;
       console.log("data in get--->", data);

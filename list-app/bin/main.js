@@ -84,6 +84,7 @@ function onError(error) {
  */
 
 function onListening() {
+  console.log('Listeing to Port', process.env.PORT || '5000') ;
   let addr = httpServer.address();
   let bind = typeof addr === 'string'
     ? 'pipe ' + addr

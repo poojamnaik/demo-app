@@ -1,9 +1,23 @@
 <div class="list-container">
-    <button (click) = "showFlash()"> showFlash</button>
+    <!-- <button (click) = "showFlash()"> ShowFlash</button>
     <div class="list-item" *ngFor="let month of months; let i = index;" (click)="selectMonth(month);">
         <span [ngClass]="{'selected-item': month === selectedMonth}">{{month}}</span>
     </div>
     <div class="footer">
         <button (click)="clearSelection();">Reset Month Selection</button>
+    </div> -->
+    <div class="link-app">
+        <div><span>app_namespace</span><span class="link-field-value">namespace</span></div>
+        <div><span>instance_id</span><span class="link-field-value">instance_id</span></div>
+        <div><span>path_param</span><span class="link-field-value">customerPathParam</span></div>
+        <div><span>expiry</span><span class="link-field-value">3000</span></div>
+        <div><span>callback</span><span class="link-field-value">() => 
+            console.log('Bewware, For this is hashPaylod callback!!');
+          </span></div>
+    </div>
+
+    <div style="margin: 50px 0px;">
+        <div>display fragmented url: <span class="link-field-value">{{sucessMessage}}</span></div>
+        <div>error: <span class="link-field-value" >{{error}}</span></div>
     </div>
 </div>

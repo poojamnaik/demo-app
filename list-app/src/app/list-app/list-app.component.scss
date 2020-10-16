@@ -15,3 +15,14 @@
 .footer{
     text-align: right;
 }
+
+.link-app div{
+    height :32px;
+}
+
+.link-app div span.link-field-value{
+    padding : 0px 10px;
+    ::before{
+        content: ': '
+    }
+}

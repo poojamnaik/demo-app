@@ -1,0 +1,133 @@
+<div class="container">
+        <div class ="payload-form">
+          <h1>Payload Form</h1>
+          <form (ngSubmit)="onSubmit()" #payloadForm="ngForm">
+            
+            <div class="form-group ">
+              <label for="name" class="required">App Namespace</label>
+              <input type="text" class="form-control" id="name" [(ngModel)]="hashPayload.app_namespace" name="name">
+            </div>
+
+            <div class="form-group">
+              <label for="alterEgo"  class="required">Url Fragment</label>
+              <input type="text" class="form-control" id="alterEgo" [(ngModel)]="hashPayload.path_param" name="alterEgo">
+            </div>
+
+            <div class="form-group">
+                <label for="name">Expiry(days)</label>
+                <input type="text" class="form-control" id="name" [(ngModel)]="hashPayload.expiry" name="name">
+            </div>
+            
+            <div class="form-group">
+                <label for="alterEgo"> Instance Id </label>
+                <input type="text" class="form-control" id="alterEgo" [(ngModel)]="hashPayload.instance_id" name="alterEgo">
+            </div>
+
+            <button type="submit" class="btn btn-success" [disabled]="!payloadForm.form.valid">Submit</button>
+            <button type="button" class="btn btn-default" (click)="newPayload(); payloadForm.reset()">New Payload</button>
+          </form>
+        </div>
+
+        <div [hidden]="!submitted || loading" >
+          <div></div>
+           <div class="row" *ngIf="hashedUrl">
+             <div class="panel panel-primary">
+                 <div class="panel-heading">
+                   <h4 class="panel-title"><strong>Success</strong></h4>
+                 </div>
+                 <div class="panel-body">
+                         {{ hashedUrl }}
+                 </div>
+             </div>
+           </div>
+           <div class="row"  *ngIf="error">
+             <div class="panel panel-warning">
+               <div class="panel-heading">
+                 <h4 class="panel-title"><strong>Error</strong></h4>
+               </div>
+               <div class="panel-body">
+                       {{ error }}
+               </div>
+             </div>
+           </div>
+           <br>
+         </div>
+        <div *ngIf="loading">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin: auto;; display: block;" width="90px" height="90px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
+            <circle cx="50" cy="50" r="32" stroke-width="8" stroke="#85a2b6" stroke-dasharray="50.26548245743669 50.26548245743669" fill="none" stroke-linecap="round">
+              <animateTransform attributeName="transform" type="rotate" dur="1s" repeatCount="indefinite" keyTimes="0;1" values="0 50 50;360 50 50"></animateTransform>
+            </circle>
+            <circle cx="50" cy="50" r="23" stroke-width="8" stroke="#bbcedd" stroke-dasharray="36.12831551628262 36.12831551628262" stroke-dashoffset="36.12831551628262" fill="none" stroke-linecap="round">
+              <animateTransform attributeName="transform" type="rotate" dur="1s" repeatCount="indefinite" keyTimes="0;1" values="0 50 50;-360 50 50"></animateTransform>
+            </circle>
+            </svg>
+        </div>
+
+        
+        <div class ="payload-form">
+          <h1>Payload Form2 </h1>
+          <form (ngSubmit)="onSubmit1()" #payloadForm1="ngForm">
+            
+            <div class="form-group ">
+              <label for="name" class="required">App Namespace</label>
+              <input type="text" class="form-control" id="name" [(ngModel)]="hashPayload1.app_namespace" name="name">
+            </div>
+
+            <div class="form-group">
+              <label for="alterEgo"  class="required">Url Fragment</label>
+              <input type="text" class="form-control" id="alterEgo" [(ngModel)]="hashPayload1.path_param" name="alterEgo">
+            </div>
+
+            <div class="form-group">
+                <label for="name">Expiry(days)</label>
+                <input type="text" class="form-control" id="name" [(ngModel)]="hashPayload1.expiry" name="name">
+            </div>
+            
+            <div class="form-group">
+                <label for="alterEgo"> Instance Id </label>
+                <input type="text" class="form-control" id="alterEgo" [(ngModel)]="hashPayload1.instance_id" name="alterEgo">
+            </div>
+
+            <button type="submit" class="btn btn-success" [disabled]="!payloadForm1.form.valid">Submit</button>
+            <button type="button" class="btn btn-default" (click)="newPayload(); payloadForm1.reset()">New Payload</button>
+          </form>
+        </div>
+        
+      </div>
+      
+        <div >
+         <div></div>
+          <div class="row" *ngIf="hashedUrl1">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                  <h4 class="panel-title"><strong>Success</strong></h4>
+                </div>
+                <div class="panel-body">
+                        <a href="">{{ hashedUrl1 }}</a>
+                </div>
+            </div>
+          </div>
+          <div class="row"  *ngIf="error1">
+            <div class="panel panel-warning">
+              <div class="panel-heading">
+                <h4 class="panel-title"><strong>Error</strong></h4>
+              </div>
+              <div class="panel-body">
+                      {{ error1 }}
+              </div>
+            </div>
+          </div>
+          <br>
+        </div>
+     
+<div *ngIf="loading">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin: auto;; display: block;" width="90px" height="90px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
+    <circle cx="50" cy="50" r="32" stroke-width="8" stroke="#85a2b6" stroke-dasharray="50.26548245743669 50.26548245743669" fill="none" stroke-linecap="round">
+      <animateTransform attributeName="transform" type="rotate" dur="1s" repeatCount="indefinite" keyTimes="0;1" values="0 50 50;360 50 50"></animateTransform>
+    </circle>
+    <circle cx="50" cy="50" r="23" stroke-width="8" stroke="#bbcedd" stroke-dasharray="36.12831551628262 36.12831551628262" stroke-dashoffset="36.12831551628262" fill="none" stroke-linecap="round">
+      <animateTransform attributeName="transform" type="rotate" dur="1s" repeatCount="indefinite" keyTimes="0;1" values="0 50 50;-360 50 50"></animateTransform>
+    </circle>
+    </svg>
+</div>
+      
